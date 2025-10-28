@@ -15,14 +15,14 @@ from telegram.ext import (
 from telegram.helpers import escape_markdown
 from telegram.constants import ParseMode
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
-load_dotenv() 
+load_dotenv()
 
 # Ambil token dari .env
-BOT_TOKEN = os.getenv("BOT_TOKEN") 
+BOT_TOKEN = os.environ.get('BOT_TOKEN') 
 # Ambil ID Admin dari .env
-ID_CHAT_ADMIN = os.getenv("ID_CHAT_ADMIN") 
+ID_CHAT_ADMIN = os.environ.get('ID_CHAT_ADMIN')
 
 # Hentikan bot jika variabel penting tidak ditemukan
 if not BOT_TOKEN:
